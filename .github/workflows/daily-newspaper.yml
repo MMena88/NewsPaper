@@ -38,8 +38,8 @@ permissions:
 
 # Prevent two simultaneous deployments from racing
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: daily-newspaper
+  cancel-in-progress: true
 
 jobs:
   # ───────────────────────────────────────────────────────────────────────────

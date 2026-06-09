@@ -1,0 +1,135 @@
+name: Daily Market Newspaper
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SCHEDULE NOTE
+#   8:00 AM America/New_York =
+#     13:00 UTC during EDT (Mar–Nov, UTC-4)
+#     13:00 UTC during EST (Nov–Mar, UTC-5)  → actually 14:00 UTC when EST
+#
+#   We run at BOTH 13:00 and 14:00 UTC.  The Python script itself checks the
+#   current hour in America/New_York and exits early if it is not yet 8 AM,
+#   so only one of the two daily runs will actually publish the report.
+#   Manual (workflow_dispatch) runs always publish immediately.
+# ─────────────────────────────────────────────────────────────────────────────
+
+on:
+  schedule:
+    # 13:00 UTC  →  8 AM New York during EDT (summer)
+    - cron: "0 13 * * *"
+    # 14:00 UTC  →  8 AM New York during EST (winter / standard time)
+    - cron: "0 14 * * *"
+
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force report generation (bypass the 8 AM time check)"
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+# Grant the minimum permissions required
+permissions:
+  contents: write        # commit generated files back to the repo
+  pages: write           # deploy to GitHub Pages
+  id-token: write        # required for OIDC-based Pages deployment
+
+# Prevent two simultaneous deployments from racing
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # ───────────────────────────────────────────────────────────────────────────
+  # JOB 1 – Generate the daily report and commit it back to the repo
+  # ───────────────────────────────────────────────────────────────────────────
+  generate-report:
+    name: Generate Daily Report
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Run the report generator.
+      # On scheduled runs the script checks the NY hour internally.
+      # On manual (workflow_dispatch) runs we pass --force so output is
+      # always produced regardless of the current hour.
+      - name: Generate daily newspaper
+        env:
+          # API key is read from a repository secret – never hardcoded.
+          # Go to Settings → Secrets and variables → Actions → New secret
+          # and add:  GEMINI_API_KEY = <your key>
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Signal to the script whether this is a forced manual run
+          FORCE_REPORT: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.force == 'true' && 'true' || 'false' }}
+        run: |
+          if [ "$FORCE_REPORT" = "true" ]; then
+            python scripts/generate_report.py --force
+          else
+            python scripts/generate_report.py
+          fi
+
+      # Commit every generated/updated file back to the repository so the
+      # archive grows over time and the repo always contains the latest build.
+      - name: Commit updated site files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/ reports/
+          git diff --quiet --cached || \
+            git commit -m "chore: daily market newspaper $(date -u +'%Y-%m-%d') [skip ci]"
+          git push
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # JOB 2 – Deploy the /public folder to GitHub Pages
+  #   Uses the official GitHub Pages Actions deployment (not deploy-from-branch).
+  #   Requires:  Settings → Pages → Source = "GitHub Actions"
+  # ───────────────────────────────────────────────────────────────────────────
+  deploy-pages:
+    name: Deploy to GitHub Pages
+    needs: generate-report      # only run after a successful report generation
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Pull the commit that was just pushed by the generate-report job
+      - name: Pull latest generated files
+        run: git pull --rebase
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      # Upload only the /public directory as the Pages artifact
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      # Deploy the uploaded artifact to the live Pages URL
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

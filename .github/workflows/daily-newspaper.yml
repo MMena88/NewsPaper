@@ -80,13 +80,9 @@ jobs:
           # and add:  GEMINI_API_KEY = <your key>
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           # Signal to the script whether this is a forced manual run
-          FORCE_REPORT: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.force == 'true' && 'true' || 'false' }}
+          FORCE_REPORT: "true"
         run: |
-          if [ "$FORCE_REPORT" = "true" ]; then
-            python scripts/generate_report.py --force
-          else
-            python scripts/generate_report.py
-          fi
+          python scripts/generate_report.py --force
 
       # Commit every generated/updated file back to the repository so the
       # archive grows over time and the repo always contains the latest build.

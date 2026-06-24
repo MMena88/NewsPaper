@@ -1,9 +1,15 @@
 [
   {
+    "date": "2026-06-24",
+    "tone": "Risk-on",
+    "summary": "Los índices del mercado general muestran una postura alcista. El fuerte interés de compra en valores tecnológicos de bet...",
+    "latest": true
+  },
+  {
     "date": "2026-06-23",
     "tone": "Risk-off",
     "summary": "El mercado general muestra un tono bajista activo. Los índices cotizan por debajo de niveles clave intradía, con rotació...",
-    "latest": true
+    "latest": false
   },
   {
     "date": "2026-06-22",

@@ -1,9 +1,15 @@
 [
   {
-    "date": "2026-07-18",
+    "date": "2026-07-19",
     "tone": "Risk-off",
     "summary": "El mercado general muestra un tono bajista activo. Los índices cotizan por debajo de niveles clave intradía, con rotació...",
     "latest": true
+  },
+  {
+    "date": "2026-07-18",
+    "tone": "Risk-off",
+    "summary": "El mercado general muestra un tono bajista activo. Los índices cotizan por debajo de niveles clave intradía, con rotació...",
+    "latest": false
   },
   {
     "date": "2026-07-17",

@@ -1,9 +1,15 @@
 [
   {
-    "date": "2026-08-05",
+    "date": "2026-08-06",
     "tone": "Neutral",
     "summary": "El mercado de acciones muestra un comportamiento de consolidación lateral. La negociación indecisa y el rendimiento mixt...",
     "latest": true
+  },
+  {
+    "date": "2026-08-05",
+    "tone": "Neutral",
+    "summary": "El mercado de acciones muestra un comportamiento de consolidación lateral. La negociación indecisa y el rendimiento mixt...",
+    "latest": false
   },
   {
     "date": "2026-08-04",

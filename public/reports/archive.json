@@ -1,9 +1,15 @@
 [
   {
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "tone": "Risk-on",
     "summary": "Los índices del mercado general muestran una postura alcista. El fuerte interés de compra en valores tecnológicos de bet...",
     "latest": true
+  },
+  {
+    "date": "2026-10-05",
+    "tone": "Risk-on",
+    "summary": "Los índices del mercado general muestran una postura alcista. El fuerte interés de compra en valores tecnológicos de bet...",
+    "latest": false
   },
   {
     "date": "2026-10-04",

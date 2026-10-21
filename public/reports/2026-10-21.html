@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Periódico financiero diario con análisis detallados de acciones (Nvidia), criptomonedas (Bitcoin) y mercados globales.">
+    <title>Diario de Mercados Financieros - 2026-10-21</title>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../app.css">
+</head>
+
+<body>
+
+    <!-- Scrolling Ticker Ribbon -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <!-- Double the items to make the infinite scroll smooth -->
+            
+            <div class="ticker-item">
+                <span class="symbol-name">S&P 500</span>
+                <span class="price">7,766.74</span>
+                <span class="change up">
+                    +0.70%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">Nasdaq 100</span>
+                <span class="price">26,747.79</span>
+                <span class="change up">
+                    +1.22%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">Dow Jones</span>
+                <span class="price">52,792.56</span>
+                <span class="change up">
+                    +0.57%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">BTC</span>
+                <span class="price">$84,632.08</span>
+                <span class="change up">
+                    +2.04%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">ETH</span>
+                <span class="price">$2,514.22</span>
+                <span class="change up">
+                    +2.76%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">NVDA</span>
+                <span class="price">$221.66</span>
+                <span class="change up">
+                    +2.40%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">TSLA</span>
+                <span class="price">$387.32</span>
+                <span class="change up">
+                    +3.64%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">GOLD</span>
+                <span class="price">$4,152.60</span>
+                <span class="change up">
+                    +0.24%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">US10Y</span>
+                <span class="price">5.11%</span>
+                <span class="change down">
+                    -0.16%
+                </span>
+            </div>
+            
+            
+            <div class="ticker-item">
+                <span class="symbol-name">S&P 500</span>
+                <span class="price">7,766.74</span>
+                <span class="change up">
+                    +0.70%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">Nasdaq 100</span>
+                <span class="price">26,747.79</span>
+                <span class="change up">
+                    +1.22%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">Dow Jones</span>
+                <span class="price">52,792.56</span>
+                <span class="change up">
+                    +0.57%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">BTC</span>
+                <span class="price">$84,632.08</span>
+                <span class="change up">
+                    +2.04%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">ETH</span>
+                <span class="price">$2,514.22</span>
+                <span class="change up">
+                    +2.76%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">NVDA</span>
+                <span class="price">$221.66</span>
+                <span class="change up">
+                    +2.40%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">TSLA</span>
+                <span class="price">$387.32</span>
+                <span class="change up">
+                    +3.64%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">GOLD</span>
+                <span class="price">$4,152.60</span>
+                <span class="change up">
+                    +0.24%
+                </span>
+            </div>
+            
+            <div class="ticker-item">
+                <span class="symbol-name">US10Y</span>
+                <span class="price">5.11%</span>
+                <span class="change down">
+                    -0.16%
+                </span>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="brand">
+                <h1>
+                    <span style="font-size: 2.5rem;">🌌</span> Diario de Mercados
+                </h1>
+                <p>Análisis exhaustivo del mercado financiero con Inteligencia Artificial</p>
+            </div>
+            <div class="meta-controls">
+                <div class="date-badge">📅 Edición: 2026-10-21</div>
+                <div class="archive-selector">
+                    <select id="archive-select">
+                        <!-- Populated dynamically by app.js -->
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Layout -->
+        <div class="dashboard-grid">
+
+            <!-- Left Column: Editorial Opinions & Market Metrics -->
+            <div class="editorial-section">
+
+                <!-- Market Sentiment Card -->
+                <div class="sentiment-hero glass-panel risk-on hover-shadow">
+                    <div class="sentiment-header">
+                        <h2 class="editorial-title">Estado General del Mercado</h2>
+                        <span class="sentiment-badge-large">Apetito por el Riesgo (Risk-on)</span>
+                    </div>
+
+                    <p class="editorial-body">
+                        El tono reinante en la sesión financiera se evalúa como <strong>Apetito por el Riesgo (Risk-on)</strong>.
+                        A continuación se presenta nuestro análisis sobre los factores dominantes en las últimas horas
+                        de cotización.
+                    </p>
+
+                    <!-- Bull & Bear Split Lists -->
+                    <div class="bull-bear-container">
+                        <!-- Bullish Cases -->
+                        <div class="bull-bear-card bull-card">
+                            <h3>🟢 Catalizadores Positivos (Bueno)</h3>
+                            <ul class="bull-bear-list">
+                                
+                                <li>Los principales índices de EE.UU. muestran impulso alcista, liderados por el Nasdaq of 1.22%.</li>
+                                
+                                <li>Bitcoin muestra resiliencia alcista, subiendo un 2.04% and leading positive crypto sentiment.</li>
+                                
+                                <li>NVIDIA demuestra una fuerza notable con una subida de 2.40% advance, driving positive sentiment in the AI and semiconductor sector.</li>
+                                
+                            </ul>
+                        </div>
+
+                        <!-- Bearish Cases -->
+                        <div class="bull-bear-card bear-card">
+                            <h3>🔴 Catalizadores Negativos (Malo)</h3>
+                            <ul class="bull-bear-list">
+                                
+                                <li>Traders remain cautious ahead of upcoming macroeconomic data releases and central bank commentary.</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Market Opinion Section -->
+                <div class="opinion-container glass-panel hover-shadow">
+                    <h3>
+                        <span>🔮</span> Opinión y Dirección General del Mercado
+                    </h3>
+                    <p class="editorial-body">
+                        Los índices del mercado general muestran una postura alcista. El fuerte interés de compra en valores tecnológicos de beta alto y la estabilización de los rendimientos de los bonos sugieren que los compradores tienen el control de la sesión actual. Se espera una continuación al alza, siempre que las noticias macroeconómicas sigan siendo favorables. Sesgo Direccional: **ALCISTA (Subida)**.
+                    </p>
+                </div>
+
+                <!-- Crypto Focus Section (Bitcoin) -->
+                <div class="opinion-container glass-panel hover-shadow" style="border-color: rgba(245, 158, 11, 0.25);">
+                    <h3>
+                        <span>🪙</span> Enfoque Cripto: Bitcoin & Ecosistema
+                    </h3>
+                    <p class="editorial-body">
+                        **Bitcoin (BTC-USD)** cotiza a $84,632.08, registrando un cambio diario de +2.04%. La tendencia de corto plazo para Bitcoin se clasifica como **ALCISTA (Subida)**. El volumen de negociación y el flujo de noticias recientes influyen en este movimiento. Se proyecta un soporte inmediato en los $81,247 y la resistencia principal en los $88,017.
+                    </p>
+                </div>
+
+                <!-- Stocks Specific Analysis (Nvidia) -->
+                <div class="opinion-container glass-panel hover-shadow" style="border-color: rgba(16, 185, 129, 0.25);">
+                    <h3>
+                        <span>⚡</span> Análisis de Acciones Clave & Sector IA
+                    </h3>
+                    <p class="editorial-body">
+                        En el sector de renta variable corporativa, las principales acciones de megacapitalización tecnológica muestran señales mixtas. **NVIDIA** cotiza a $221.66 (+2.40%), mostrando un comportamiento alcista en la sesión. El clima de NVIDIA parece favorable para seguir subiendo en el mediano plazo debido al fuerte impulso del sector de Inteligencia Artificial. Acciones como Apple, Microsoft y Tesla se mueven en línea con el sentimiento tecnológico general.
+                    </p>
+                </div>
+
+                <!-- Detailed Market Metrics -->
+                <div>
+                    <h2 class="assets-section-title">Precios y Métricas de Mercado</h2>
+
+                    <div class="asset-cards-grid">
+                        
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">S&P 500</span>
+                                <span class="asset-symbol">^GSPC</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    $7,766.74
+                                    
+                                </span>
+                                <span class="asset-change up">
+                                    +0.70%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 7709.34</span>
+                                <span>Max: 7768.25</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">Nasdaq 100</span>
+                                <span class="asset-symbol">^IXIC</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    $26,747.79
+                                    
+                                </span>
+                                <span class="asset-change up">
+                                    +1.22%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 26507.07</span>
+                                <span>Max: 26778.90</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">Dow Jones</span>
+                                <span class="asset-symbol">^DJI</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    $52,792.56
+                                    
+                                </span>
+                                <span class="asset-change up">
+                                    +0.57%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 52392.28</span>
+                                <span>Max: 52798.50</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">NVIDIA</span>
+                                <span class="asset-symbol">NVDA</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    $221.66
+                                    
+                                </span>
+                                <span class="asset-change up">
+                                    +2.40%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 217.66</span>
+                                <span>Max: 222.16</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">Apple</span>
+                                <span class="asset-symbol">AAPL</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    $344.52
+                                    
+                                </span>
+                                <span class="asset-change up">
+                                    +1.48%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 338.83</span>
+                                <span>Max: 345.22</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">Microsoft</span>
+                                <span class="asset-symbol">MSFT</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    $532.53
+                                    
+                                </span>
+                                <span class="asset-change up">
+                                    +0.12%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 525.02</span>
+                                <span>Max: 533.25</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">Tesla</span>
+                                <span class="asset-symbol">TSLA</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    $387.32
+                                    
+                                </span>
+                                <span class="asset-change up">
+                                    +3.64%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 380.51</span>
+                                <span>Max: 388.84</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">Bitcoin</span>
+                                <span class="asset-symbol">BTC-USD</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    $84,632.08
+                                    
+                                </span>
+                                <span class="asset-change up">
+                                    +2.04%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 82565.87</span>
+                                <span>Max: 84835.48</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">Ethereum</span>
+                                <span class="asset-symbol">ETH-USD</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    $2,514.22
+                                    
+                                </span>
+                                <span class="asset-change up">
+                                    +2.76%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 2435.77</span>
+                                <span>Max: 2520.65</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">Gold</span>
+                                <span class="asset-symbol">GC=F</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    $4,152.60
+                                    
+                                </span>
+                                <span class="asset-change up">
+                                    +0.24%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 4124.00</span>
+                                <span>Max: 4160.60</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">Crude Oil</span>
+                                <span class="asset-symbol">CL=F</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    $97.06
+                                    
+                                </span>
+                                <span class="asset-change down">
+                                    -4.65%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 96.26</span>
+                                <span>Max: 100.40</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">US Dollar Index</span>
+                                <span class="asset-symbol">DX-Y.NYB</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    101.67
+                                    
+                                </span>
+                                <span class="asset-change down">
+                                    -0.06%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 101.64</span>
+                                <span>Max: 101.84</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="asset-card glass-panel hover-shadow">
+                            <div class="asset-header">
+                                <span class="asset-name">10-Year Yield</span>
+                                <span class="asset-symbol">^TNX</span>
+                            </div>
+                            <div class="asset-price-row">
+                                <span class="asset-price">
+                                    
+                                    5.11%
+                                    
+                                </span>
+                                <span class="asset-change down">
+                                    -0.16%
+                                </span>
+                            </div>
+                            <div class="asset-range">
+                                <span>Min: 5.08</span>
+                                <span>Max: 5.12</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: News, Calendar and Levels -->
+            <div class="sidebar-section">
+
+                <!-- Highlight Levels to Watch -->
+                <div class="highlight-panel glass-panel hover-shadow">
+                    <h3 class="widget-title">📌 Niveles Clave a Vigilar</h3>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px;">Soportes y
+                        resistencias calculados para la sesión de hoy.</p>
+
+                    
+                    <h4 style="font-size: 0.95rem; margin-top: 15px; margin-bottom: 5px; color: var(--primary);">Indices</h4>
+                    <table class="levels-table">
+                        <thead>
+                            <tr>
+                                <th>Activo</th>
+                                <th>Precio</th>
+                                <th class="support">Soporte</th>
+                                <th class="resistance">Resist.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td style="font-weight: 500;">S&P 500</td>
+                                <td>$7,766.74</td>
+                                <td class="support">$7,650.24</td>
+                                <td class="resistance">$7,883.24</td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 500;">Nasdaq 100</td>
+                                <td>$26,747.79</td>
+                                <td class="support">$26,346.57</td>
+                                <td class="resistance">$27,149.01</td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 500;">Dow Jones</td>
+                                <td>$52,792.56</td>
+                                <td class="support">$52,000.67</td>
+                                <td class="resistance">$53,584.45</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <h4 style="font-size: 0.95rem; margin-top: 15px; margin-bottom: 5px; color: var(--primary);">Crypto</h4>
+                    <table class="levels-table">
+                        <thead>
+                            <tr>
+                                <th>Activo</th>
+                                <th>Precio</th>
+                                <th class="support">Soporte</th>
+                                <th class="resistance">Resist.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td style="font-weight: 500;">Bitcoin</td>
+                                <td>$84,632.08</td>
+                                <td class="support">$83,362.60</td>
+                                <td class="resistance">$85,901.56</td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 500;">Ethereum</td>
+                                <td>$2,514.22</td>
+                                <td class="support">$2,476.51</td>
+                                <td class="resistance">$2,551.93</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    <h4 style="font-size: 0.95rem; margin-top: 15px; margin-bottom: 5px; color: var(--primary);">Stocks</h4>
+                    <table class="levels-table">
+                        <thead>
+                            <tr>
+                                <th>Activo</th>
+                                <th>Precio</th>
+                                <th class="support">Soporte</th>
+                                <th class="resistance">Resist.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td style="font-weight: 500;">NVIDIA</td>
+                                <td>$221.66</td>
+                                <td class="support">$218.34</td>
+                                <td class="resistance">$224.98</td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 500;">Apple</td>
+                                <td>$344.52</td>
+                                <td class="support">$339.35</td>
+                                <td class="resistance">$349.69</td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 500;">Microsoft</td>
+                                <td>$532.53</td>
+                                <td class="support">$524.54</td>
+                                <td class="resistance">$540.52</td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 500;">Tesla</td>
+                                <td>$387.32</td>
+                                <td class="support">$381.51</td>
+                                <td class="resistance">$393.13</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                </div>
+
+                <!-- Latest News Headlines Widget -->
+                <div class="news-widget glass-panel hover-shadow">
+                    <h3 class="widget-title">📰 Titulares Relevantes y Catalizadores</h3>
+                    <div class="news-list">
+                        
+
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="disclaimer-box">
+                <strong>Cláusula de Exención de Responsabilidad (Disclaimer):</strong> Este reporte es únicamente de carácter informativo y educativo. No constituye asesoría financiera, recomendación de inversión ni oferta de compra/venta de activos. Operar en mercados financieros conlleva altos riesgos.
+            </div>
+            <p>© 2026 Diario de Mercados Financieros. Todos los derechos reservados. Impulsado por Inteligencia
+                Artificial y datos de Yahoo Finance.</p>
+        </footer>
+    </div>
+
+    <!-- Script loader -->
+    <script src="../app.js"></script>
+</body>
+
+</html>

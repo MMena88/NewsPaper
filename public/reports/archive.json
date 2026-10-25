@@ -1,9 +1,15 @@
 [
   {
-    "date": "2026-10-24",
+    "date": "2026-10-25",
     "tone": "Mixed",
     "summary": "El mercado general muestra un tono bajista activo. Los índices cotizan por debajo de niveles clave intradía, con rotació...",
     "latest": true
+  },
+  {
+    "date": "2026-10-24",
+    "tone": "Mixed",
+    "summary": "El mercado general muestra un tono bajista activo. Los índices cotizan por debajo de niveles clave intradía, con rotació...",
+    "latest": false
   },
   {
     "date": "2026-10-23",
